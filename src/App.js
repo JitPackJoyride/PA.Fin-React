@@ -63,7 +63,8 @@ class App extends Component {
     return {
       position:"absolute", 
 
-      backgroundColor:"rgb(48, 48, 48)", 
+      // backgroundColor:"rgb(48, 48, 48)",
+      background: "linear-gradient(gray, rgb(48,48,48))" ,
       height:"100vh", 
       top:"0", 
       left:"0", 
@@ -73,7 +74,8 @@ class App extends Component {
   getDataBackgroundStyle = () => {
     return {
       position:"absolute", 
-
+      background: "linear-gradient(gray, rgb(48,48,48))" ,
+      
       backgroundColor:"rgb(48, 48, 48)", 
       height:"130vh", 
       top:"0", 
@@ -116,7 +118,7 @@ class App extends Component {
     `
     const InnerCirle = styled.div`
     position: absolute;
-    background: radial-gradient(  rgb(48, 48, 48),rgba(48,48,48,0.4));
+    background: radial-gradient(  rgb(40, 40, 40),gray);
     
     top: 30vh;
     left: 50vw;
@@ -159,10 +161,52 @@ class App extends Component {
     opacity: 1.0;
     font-size: 7vw;
     `
-    const FunctionItem = styled.div`
+    const FunctionItem1 = styled.div`
     color: white;
     font-weight: 900;
     background: linear-gradient(pink, red);
+    
+    height: 10vh;
+    width: 90vw;
+    margin: 5vw;
+    margin-top: 6vh;
+    margin-bottom: 6vh;
+    border-radius: 3vw;
+    line-height: 10vh;
+    font-size: 5vw;
+    `
+    const FunctionItem2 = styled.div`
+    color: white;
+    font-weight: 900;
+    background: linear-gradient(red, orange);
+    
+    height: 10vh;
+    width: 90vw;
+    margin: 5vw;
+    margin-top: 6vh;
+    margin-bottom: 6vh;
+    border-radius: 3vw;
+    line-height: 10vh;
+    font-size: 5vw;
+    `
+    const FunctionItem3 = styled.div`
+    color: white;
+    font-weight: 900;
+    background: linear-gradient(orange, blue);
+    
+    height: 10vh;
+    width: 90vw;
+    margin: 5vw;
+    margin-top: 6vh;
+    margin-bottom: 6vh;
+    border-radius: 3vw;
+    line-height: 10vh;
+    font-size: 5vw;
+    `
+    const FunctionItem4 = styled.div`
+    color: white;
+    font-weight: 900;
+    background: linear-gradient(blue, green);
     
     height: 10vh;
     width: 90vw;
@@ -200,7 +244,7 @@ class App extends Component {
     `
 
     const BackButton = styled.div`
-    color: gray;
+    color: rgb(48,48,48);
     font-size: 10vw;
     position: absolute;
     font-weight: 900;
@@ -264,10 +308,10 @@ class App extends Component {
               <h2 style={{textAlign:"center", fontSize:"8vw", color:"white", marginBottom: "1vh"}}>Smart Apply</h2>
               <BackButton onClick={() => this.changeId(1)}> {"<"} </BackButton>
               <Image2><img src={icon} alt="icon" width="100" height="100"></img></Image2>
-              <FunctionItem onClick={() => this.changeId(6)}>Personal Accounts</FunctionItem>
-              <FunctionItem onClick={() => this.changeId(7)}>Credit Cards</FunctionItem>
-              <FunctionItem onClick={() => this.changeId(8)}>Loans</FunctionItem>
-              <FunctionItem onClick={() => this.changeId(9)}>Insurance</FunctionItem>
+              <FunctionItem1 onClick={() => this.changeId(6)}>Personal Accounts</FunctionItem1>
+              <FunctionItem2 onClick={() => this.changeId(7)}>Credit Cards</FunctionItem2>
+              <FunctionItem3 onClick={() => this.changeId(8)}>Loans</FunctionItem3>
+              <FunctionItem4 onClick={() => this.changeId(9)}>Insurance</FunctionItem4>
               
             </div>
           );
@@ -327,6 +371,9 @@ class App extends Component {
           return (
             <div className="App" style={this.getBackgroundStyle()}>
               <BackButton onClick={() => this.changeId(1)}> {"<"} </BackButton>
+              <h2 style={{textAlign:"center", fontSize:"8vw", color:"white", marginBottom: "1vh"}}>Account History</h2>
+              <Image2><img src={icon} alt="icon" width="100" height="100"></img></Image2>
+
               
             </div>
           );
